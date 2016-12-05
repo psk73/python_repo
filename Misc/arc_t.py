@@ -5,6 +5,9 @@ colors = ['red','yellow','green','blue','purple','orange']
 
 
 def polyline(trtl,angle,nsteps,nlength,curv):
+    '''
+    Function to draw a arc
+    '''
     for i in range(nsteps):
         trtl.fd(nlength/nsteps)
         if( curv == 'l'):
@@ -14,6 +17,9 @@ def polyline(trtl,angle,nsteps,nlength,curv):
 
 
 def drawFlower(bob,numPetals,petalAngle,petalDrawsteps,petalLength):
+    '''
+    Function to draw a flower
+    '''
     for j in range(numPetals):
         bob.color(colors[j%len(colors)])
         polyline(bob,petalAngle,petalDrawsteps,petalLength,'l')
@@ -24,6 +30,9 @@ def drawFlower(bob,numPetals,petalAngle,petalDrawsteps,petalLength):
 
 
 def flowerApp():
+    '''
+    Application that draws flowers 
+    '''
     bob = turtle.Turtle()
     bob.pensize(1)
     numFlowers = 20
